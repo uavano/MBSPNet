@@ -24,7 +24,6 @@ class BONM(nn.Module):
             z_out = align_mask * z_mem + (1.0 - align_mask) * z
         else:
             z_out = z_mem
-
         return z_out, weight
 
     def compute_ortho_loss(self, global_flow_feat):
