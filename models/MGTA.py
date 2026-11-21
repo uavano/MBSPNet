@@ -6,7 +6,7 @@ import torch.nn as nn
 import torch.nn.functional as F
 
 
-class TCTA(nn.Module):
+class MGTA(nn.Module):
     def __init__(self, token_size, group_size, d_model, head, p=0.1):
         super().__init__()
         self.h, self.w = token_size
