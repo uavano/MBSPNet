@@ -5,14 +5,9 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 import torchvision.ops as ops
+from NeuFlow.neuflow import NeuFlow
+from NeuFlow.backbone_v7 import ConvBlock
 
-try:
-    from NeuFlow.neuflow import NeuFlow
-    from NeuFlow.backbone_v7 import ConvBlock
-except ImportError:
-    NeuFlow = None
-    ConvBlock = None
-    print("Warning: NeuFlow modules not found. Optical flow extraction will fail.")
 
 
 class ConvBlock2d(nn.Module):
